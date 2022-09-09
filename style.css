@@ -1,0 +1,53 @@
+body {
+    margin: 25vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stage {
+    width: 500px;
+    height: 300px;
+    background-image: radial-gradient(red, green, blue, coral, violet, pink, orange, black, purple, khaki);
+    background-image: linear-gradient(khaki, skyblue, gray);
+    border-radius: 25px;
+}
+
+.ball {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 25px;
+    position: relative;
+    animation: sliding 2s ease-in-out 0.5s infinite alternate;
+    animation-play-state: running;
+}
+
+@keyframes sliding {
+    0% {
+        background-color: yellow;
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        top: 250px;
+        background-color: red;
+    }
+
+    50% {
+        top: 0px;
+        background-color: yellow;
+    }
+
+    75% {
+        top: 250px;
+        background-color: red;
+    }
+
+    100% {
+        background-color: black;
+        left: 450px;
+        top: 0;
+    }
+}
